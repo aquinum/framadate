@@ -1,6 +1,7 @@
 # Présentation du projet
 
-![Gitlab](https://framagit.org/assets/logo-black-f52905a40830b30aa287f784b537c823.png)[https://framagit.org](https://framagit.org)
+![Gitlab](https://framagit.org/assets/logo-black-f52905a40830b30aa287f784b537c823.png)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faquinum%2Fframadate.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Faquinum%2Fframadate?ref=badge_shield)
+[https://framagit.org](https://framagit.org)
 
 ![English](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/20px-Flag_of_the_United_Kingdom.svg.png) **Framasoft uses GitLab** for the development of its free softwares. Our Github repositories are only mirrors.
 If you want to work with us, **fork us on [framagit.org](https://framagit.org)**. (no registration needed, you can sign in with your Github account)
@@ -127,3 +128,7 @@ find a copy of this license in the file LICENSE.
 
     Mai 2010
     Raphaël DROZ, raphael.droz@gmail.com
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faquinum%2Fframadate.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Faquinum%2Fframadate?ref=badge_large)
