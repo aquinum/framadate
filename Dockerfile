@@ -14,5 +14,5 @@ ENTRYPOINT [ "bash", "/entrypoint.sh" ]
 COPY ./docker/ /tmp/setup
 RUN bash /tmp/setup/setup.sh
 
-COPY --chown=www-data:www-data . /var/www/html/
+COPY . /var/www/html/
 RUN bash /tmp/setup/configure.sh
