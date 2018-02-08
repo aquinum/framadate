@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: 'mariadb:10'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=framadate
+  app:
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html
+      - ./docker/entrypoint.sh:/entrypoint.sh
+    environment:
+      - SMTP_HOST=smtp.mailgun.org
+      - SMTP_PORT=587
+      - SMTP_SECURE=tls
+      - SMTP_USERNAME=
+      - SMTP_PASSWORD=
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+  adminer:
+    image: dehy/adminer
+    ports:
+      - 8081:80

@@ -27,6 +27,22 @@ class MailService {
             $mail = new PHPMailer(true);
             $mail->isSMTP();
 
+            if (isset($_ENV["SMTP_HOST"])) {
+                $mail->Host = $_ENV["SMTP_HOST"];
+            }
+            if (isset($_ENV["SMTP_PORT"])) {
+                $mail->Port = intval($_ENV["SMTP_PORT"]);
+            }
+            if (isset($_ENV["SMTP_USERNAME"]) && $_ENV["SMTP_USERNAME"]
+             && isset($_ENV["SMTP_PASSWORD"]) && $_ENV["SMTP_PASSWORD"]) {
+                $mail->SMTPAuth = true;
+                $mail->Username = $_ENV["SMTP_USERNAME"];
+                $mail->Password = $_ENV["SMTP_PASSWORD"]; 
+            }
+            if (isset($_ENV["SMTP_SECURE"])) {
+                $mail->SMTPSecure = $_ENV["SMTP_SECURE"]; 
+            }
+
             // From
             $mail->FromName = NOMAPPLICATION;
             $mail->From = ADRESSEMAILADMIN;
