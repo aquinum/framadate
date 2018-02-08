@@ -6,6 +6,10 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=framadate
+  smtp:
+    image: namshi/smtp
+    environment:
+      - MAILNAME=change.me
   app:
     build: .
     ports:
@@ -14,9 +18,9 @@ services:
       - ./:/var/www/html
       - ./docker/entrypoint.sh:/entrypoint.sh
     environment:
-      - SMTP_HOST=smtp.mailgun.org
-      - SMTP_PORT=587
-      - SMTP_SECURE=tls
+      - SMTP_HOST=smtp
+      - SMTP_PORT=25
+      - SMTP_SECURE= # ø, 'ssl' or 'tls'
       - SMTP_USERNAME=
       - SMTP_PASSWORD=
       - ADMIN_USERNAME=admin
