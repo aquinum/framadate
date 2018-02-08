@@ -14,7 +14,7 @@
         "o80/i18n": "dev-develop",
         "phpmailer/phpmailer": "~5.2",
         "erusev/parsedown": "1.6.0",
-	"ircmaxell/password-compat": "dev-master"
+        "ircmaxell/password-compat": "dev-master"
     },
 
     "require-dev": {

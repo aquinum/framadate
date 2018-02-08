@@ -248,7 +248,9 @@
         "Password choice": "DE_Choix",
         "Password confirmation": "DE_Confirmation",
         "Permissions": "DE_Permissions",
-        "Go to step 2": "Weiter zum 2. Schritt""To make the description more attractive, you can use the Markdown format.": "DE_Afin de rendre le descriptif de ce sondage plus attractif, vous pouvez utiliser le formatage Markdown.",
+        "Optional parameters": "DE_Paramètres optionnels",
+        "Go to step 2": "Weiter zum 2. Schritt",
+        "To make the description more attractive, you can use the Markdown format.": "DE_Afin de rendre le descriptif de ce sondage plus attractif, vous pouvez utiliser le formatage Markdown.",
         "You can enable or disable the editor at will.": "DE_Vous pouvez activer ou désactiver l'éditeur à votre guise.",
         "More informations here:": "DE_Plus d'informations ici :"
     },
@@ -327,7 +329,8 @@
         "Purged:": "Entfernt:",
         "Confirm removal of the poll": "Bestätigen Sie die Löschung der Umfrage",
         "polls in the database at this time": "Umfragen derzeit in der Datenbank",
-        "Purge the polls": "Umfragen vollständig löschen"
+        "Purge the polls": "Umfragen vollständig löschen",
+        "Installation": "DE_Installation"
     },
     "FindPolls": {
         "Send me my polls": "Senden Sie mir mein Umfragen",
@@ -374,6 +377,7 @@
     },
     "Error": {
         "Error!": "Fehler!",
+        "Forbidden!": "Verboten!",
         "Enter a title": "Titel eingeben",
         "Something is going wrong...": "Etwas geht schief...",
         "Something is wrong with the format": "Mit dem Format stimmt etwas nicht",
@@ -416,6 +420,7 @@
         "PHP version %s is enough (needed at least PHP %s).": "PHP Version %s ist ausreichend (mindestens PHP %s wird benötigt).",
         "You need to enable the PHP Intl extension.": "Sie müssen die PHP-Erweiterung Intl aktivieren.",
         "PHP Intl extension is enabled.": "Die PHP-Erweiterung Intl ist aktiviert.",
+        "The template compile directory (%s) doesn't exist in \"%s\". Retry the installation process.": "DE_The template compile directory (%s) doesn't exist in \"%s\". Retry the installation process.",
         "The template compile directory (%s) is not writable.": "Der Vorlagen-Übersetzungspfad (%s) ist nicht beschreibbar.",
         "The template compile directory (%s) is writable.": "Der Vorlagen-Übersetzungspfad (%s) ist beschreibbar.",
         "The config file directory (%s) is not writable and the config file (%s) dos not exists.": "Der Konfigurationspfad (%s) ist nicht beschreibbar und es existiert keine Konfigurationsdatei (%s).",

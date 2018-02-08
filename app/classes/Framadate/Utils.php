@@ -176,6 +176,7 @@ class Utils {
         $escaped = str_replace('"', '""', $text);
         $escaped = str_replace("\r\n", '', $escaped);
         $escaped = str_replace("\n", '', $escaped);
+        $escaped = preg_replace("/^(=|\+|\-|\@)/", "'$1", $escaped);
 
         return '"' . $escaped . '"';
     }

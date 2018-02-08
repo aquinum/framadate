@@ -1,6 +1,7 @@
 # Présentation du projet
 
 [![](https://framagit.org/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico)](https://framagit.org)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faquinum%2Fframadate.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Faquinum%2Fframadate?ref=badge_shield)
 
 ![English:](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/20px-Flag_of_the_United_Kingdom.svg.png) **Framasoft uses GitLab** for the development of its free softwares. Our Github repositories are only mirrors.
 If you want to work with us, **fork us on [framagit.org](https://framagit.org)**. (no registration needed, you can sign in with your Github account)
@@ -30,9 +31,9 @@ Un fichier est dédié à l'installation de framadate : [INSTALL.md](INSTALL.md)
 
 ## De votre côté
 
-1. Créer un compte sur [https://git.framasoft.org](https://git.framasoft.org)
-1. Créer un fork du projet principal : [Créer le fork](https://git.framasoft.org/framasoft/framadate/fork/new)
-1. Créer une branche nommée feature/[Description] à partir de la branche **develop**
+1. Créer un compte sur [https://framagit.org](https://framagit.org)
+1. Créer un fork du projet principal : [Créer le fork](https://framagit.org/framasoft/framadate/forks/new)
+1. Créer une branche nommée feature/[Description]
     * Où [Description] est une description en anglais très courte de ce qui va être fait
 1. Faire des commits dans votre branche
 1. Pusher la branche sur votre fork
@@ -126,3 +127,7 @@ find a copy of this license in the file LICENSE.
 
     Mai 2010
     Raphaël DROZ, raphael.droz@gmail.com
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faquinum%2Fframadate.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Faquinum%2Fframadate?ref=badge_large)

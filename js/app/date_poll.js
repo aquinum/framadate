@@ -92,7 +92,7 @@ $(document).ready(function () {
 
     function getLastDayNumber(last_day) {
         if (last_day == null)
-            last_day = $selected_days.find('fieldset').filter(':last')
+            last_day = $selected_days.find('fieldset').filter(':last');
         return parseInt(/^d([0-9]+)-h[0-9]+$/.exec($(last_day).find('.hours').filter(':first').attr('id'))[1])
     }
 
@@ -117,6 +117,14 @@ $(document).ready(function () {
             .next().find('legend input').val(dateStr);
         $('#day' + (new_day_number)).focus();
         updateButtonState();
+    }
+
+    function manageRemoveadayAndCopyhoursButtons() {
+        var nb_days = $selected_days.find('fieldset').length;
+        $('#day' + (getLastDayNumber() - 1)).focus();
+        if (nb_days == 1) {
+            $removeaday_and_copyhours.addClass('disabled');
+        }
     }
 
     var useFirstEmptyDateField = function (dateStr) {
