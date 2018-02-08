@@ -27,6 +27,39 @@ _Dernière mise à jour le 21 avril 2014_
 
 Un fichier est dédié à l'installation de framadate : [INSTALL.md](INSTALL.md).
 
+# Utilisation avec docker et docker-compose
+
+## Pré-requis
+
+- Il vous faut un serveur SMTP disponible, soit en ligne (service type 
+[mailgun](https://mailgun.org)), soit via une [image docker séparé](https://hub.docker.com/r/namshi/smtp/).
+
+## En développement
+
+Le docker-compose de développement inclus un montage du projet afin que le code
+modifié soit directement accessible depuis le conteneur. Le script d'entrée se
+chargera donc au premier démarrage d'installer composer et les vendors (le dossier 
+vendor/ ne doit pas exister). Un service SMTP est également fourni via l'image
+docker [namshi/smtp](https://hub.docker.com/r/namshi/smtp/).
+
+1. Modifier les variables d'environnement du fichier `docker-compose.yml`.
+Ne pas oublier de changer la variable `MAILNAME` du service `smtp` pour un nom de 
+domaine complet afin que les mails puissent être reçus.
+1. Lancer les conteneurs grâce à la commande `$ docker-compose up`. Au premier
+lancement, docker va télécharger les images mariadb, php et adminer puis construire
+le conteneur framadate. Cela prend quelques minutes. Les prochaines fois, cela sera
+instantané.
+1. Un fois le conteneur lancé, configurer l'application et installer la base de donnée 
+en utilisant le script  d'installation `http://localhost:8080/admin/install.php`. Le
+host mysql est `db`, la base de donnée est `framadate` et le mot de passe mysql root 
+est `root`.
+1. Adminer (pour administrer la bdd MySQL) est disponible sur `http://localhost:8081` 
+(avec les mêmes paramètres qu'au point précédent)
+
+## En production
+
+TODO :)
+
 # Comment contribuer
 
 ## De votre côté
