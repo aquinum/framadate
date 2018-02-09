@@ -11,7 +11,7 @@ if [ -z "${IMAGE_NAME}" ]; then
 fi
 
 function evil_git_dirty {
-    [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && echo "-dirty" || echo ""
+    [[ $(git diff --shortstat ${1:-} 2> /dev/null | tail -n1) != "" ]] && echo "-dirty" || echo ""
 }
 
 function git_branch {
@@ -25,7 +25,7 @@ function git_commit {
 VCS_BRANCH="${SOURCE_BRANCH:-$(git_branch)}"
 VCS_REF="${SOURCE_COMMIT:-$(git_commit)}"
 BUILD_DATE="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-VERSION="$(cat VERSION)$(evil_git_dirty)"
+VERSION="$(cat VERSION)$(evil_git_dirty $(cat VERSION))"
 
 docker build --build-arg VCS_BRANCH="${VCS_BRANCH}" \
              --build-arg VCS_REF="${VCS_REF}" \
